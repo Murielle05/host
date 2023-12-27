@@ -62,6 +62,15 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       appBar: AppBar(
+        leading: Builder(
+          builder: (context) {
+            return IconButton(
+                onPressed: (){
+              Scaffold.of(context).openDrawer();
+            },
+                icon: Icon(Icons.align_horizontal_left_outlined));
+          }
+        ),
         title: Text(""),
         actions: [
           RandomAvatar('saytoonz', height: 50, width: 50)
