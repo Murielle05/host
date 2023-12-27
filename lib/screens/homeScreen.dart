@@ -1,11 +1,35 @@
 import 'package:flashy_tab_bar2/flashy_tab_bar2.dart';
 import 'package:flutter/material.dart';
+import 'package:host/pages/calendar_page.dart';
+import 'package:host/pages/home_page.dart';
+import 'package:host/pages/location_page.dart';
+import 'package:host/pages/seetings_page.dart';
 import 'package:random_avatar/random_avatar.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
+
+  List<Widget> pages = [
+    HomePage(),
+    LocationPage(),
+    CalendarPage(),
+    SettingsPage()
+  ];
+
+  void _navigate(int index){
+
+    setState(() {
+      _selectedIndex = index;
+    });
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,10 +67,11 @@ class HomeScreen extends StatelessWidget {
           RandomAvatar('saytoonz', height: 50, width: 50)
         ],
       ),
+      body: pages[_selectedIndex],
       bottomNavigationBar: FlashyTabBar(
         selectedIndex: _selectedIndex,
         showElevation: true,
-        onItemSelected: (index) {},
+        onItemSelected: (index) => _navigate(index),
         items: [
           FlashyTabBarItem(
             icon: Icon(Icons.home),
