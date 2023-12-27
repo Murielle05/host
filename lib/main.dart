@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:host/screens/homeScreen.dart';
-import 'package:host/pages/home_page.dart';
 import 'package:host/theme/palette.dart';
 
 void main() {
@@ -16,8 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Hostel Five Stars',
       theme: Palette.lightModeTheme,
-      home: HomeScreen(),
-      ),
+      home: HomeScreen() ,
     );
   }
 }
+
