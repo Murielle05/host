@@ -47,6 +47,7 @@ dependencies:
   google_maps_flutter:
   sqflite:
   flutter_launcher_icons:
+  scrollable_clean_calendar:
 
 
 dev_dependencies:
