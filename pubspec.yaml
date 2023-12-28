@@ -38,6 +38,16 @@ dependencies:
   google_fonts:
   random_avatar:
   flashy_tab_bar2:
+  glass_kit:
+  flutter_styled_toast:
+  shared_preferences:
+  dio:
+  http:
+  location:
+  google_maps_flutter:
+  sqflite:
+  flutter_launcher_icons:
+
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +74,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
      - assets/images/
+     - assets/icons/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

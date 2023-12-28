@@ -6,16 +6,18 @@ class SearchField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 315,
+      width: 255,
+      padding: EdgeInsets.only(left: 10),
+      margin: EdgeInsets.only(right: 21),
       decoration: BoxDecoration(
-        color: Colors.grey[100],
+        color: Colors.white,
         borderRadius: BorderRadius.circular(15),
         boxShadow: [
           BoxShadow(
           blurRadius: 5,
-          spreadRadius: 0,
-          color: Color.fromRGBO(255, 255, 255, 1.0),
-            blurStyle: BlurStyle.inner
+          spreadRadius: -2,
+          color: Color.fromRGBO(165, 165, 165, 1.0),
+            blurStyle: BlurStyle.normal
         ),
         ]
 
