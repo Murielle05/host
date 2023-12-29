@@ -3,6 +3,7 @@ import 'package:glass_kit/glass_kit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:host/components/likeButton.dart';
 import 'package:host/theme/palette.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 class PopularContainerPage extends StatelessWidget {
   final String ville;
   final String hotelName;
@@ -14,12 +15,20 @@ class PopularContainerPage extends StatelessWidget {
     required this.ville,
     required this.hotelName,
     required this.image,
-    required this.price
+    required this.price,
   });
 
 
+
+  void initLike() async {
+    final prefs = await SharedPreferences.getInstance();
+    var liked = prefs.getBool("like");
+  }
+
   @override
   Widget build(BuildContext context) {
+
+    initLike();
     return Padding(
       padding: const EdgeInsets.only(right: 15),
       child: Container(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:host/pages/addHotels.dart';
 import 'package:host/screens/homeScreen.dart';
 import 'package:host/theme/palette.dart';
 
@@ -17,6 +18,9 @@ class MyApp extends StatelessWidget {
       title: 'Hostel Five Stars',
       theme: Palette.lightModeTheme,
       home: HomeScreen() ,
+      routes: {
+        AddHotelsPage.routeName : (context)=> AddHotelsPage()
+      },
     );
   }
 }

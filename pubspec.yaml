@@ -48,6 +48,10 @@ dependencies:
   sqflite:
   flutter_launcher_icons:
   scrollable_clean_calendar:
+  provider:
+  validation_textformfield:
+  flutter_fast_forms:
+  native_drag_n_drop:
 
 
 dev_dependencies:

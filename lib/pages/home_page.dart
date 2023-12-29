@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:host/components/popularContainer.dart';
 import 'package:host/components/searchField.dart';
+import 'package:host/provider/favorite_provider.dart';
+import 'package:provider/provider.dart';
 import 'package:random_avatar/random_avatar.dart';
 
 class HomePage extends StatelessWidget {
@@ -27,6 +29,7 @@ class HomePage extends StatelessWidget {
       200.0
     ]
   ];
+
   @override
   Widget build(BuildContext context) {
     return Padding(

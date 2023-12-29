@@ -1,5 +1,6 @@
 import 'package:flashy_tab_bar2/flashy_tab_bar2.dart';
 import 'package:flutter/material.dart';
+import 'package:host/pages/addHotels.dart';
 import 'package:host/pages/calendar_page.dart';
 import 'package:host/pages/home_page.dart';
 import 'package:host/pages/location_page.dart';
@@ -42,6 +43,12 @@ class _HomeScreenState extends State<HomeScreen> {
             ListTile(
               leading: Icon(Icons.home),
               title: Text("Home"),
+            ),
+            SizedBox(height: 10,),
+            ListTile(
+              leading: Icon(Icons.add),
+              title: Text("Create a new Hotel"),
+              onTap: () => Navigator.pushNamed(context, AddHotelsPage.routeName),
             ),
             SizedBox(height: 10,),
             ListTile(
